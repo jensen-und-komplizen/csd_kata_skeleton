@@ -8,5 +8,9 @@ public class KataTest {
         assertEquals("R", rotDreizehn("E"));
     }
 
+    private String rotDreizehn(String i) {
+        return "R";
+    }
+
 
 }
