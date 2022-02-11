@@ -8,9 +8,12 @@ public class KataTest {
         assertEquals("R", rotDreizehn("E"));
     }
 
+    @Test
+    public void singleUpperCaseLetterF() {
+        assertEquals("S", rotDreizehn("F"));
+    }
+
     private String rotDreizehn(String i) {
         return "R";
     }
-
-
 }
