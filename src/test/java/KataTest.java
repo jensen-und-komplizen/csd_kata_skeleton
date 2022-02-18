@@ -6,4 +6,9 @@ public class KataTest {
     public void firstTest() {
         assertTrue(true);
     }
+
+    @Test
+    public void uppercaseWTranslatesToUppercaseJ() {
+        assertEquals("J", rot13("W"));
+    }
 }
