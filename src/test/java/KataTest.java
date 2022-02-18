@@ -7,6 +7,11 @@ public class KataTest {
         assertEquals("J", rot13("W"));
     }
 
+    @Test
+    public void uppercaseETranslatesToUppercaseR() {
+        assertEquals("R", rot13("E"));
+    }
+
     private String rot13(String w) {
         return "J";
     }
