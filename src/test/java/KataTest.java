@@ -18,12 +18,9 @@ public class KataTest {
     }
 
     private String rot13(String stringToConvert) {
-        if (stringToConvert.equals("A")) {
-            char character = stringToConvert.charAt(0);
+        char character = stringToConvert.charAt(0);
+        if (character >= 'A' && character <= 'N') {
             return Character.toString(character+13);
-        }
-        if (stringToConvert.equals("E")) {
-            return "R";
         }
 
         return "J";
