@@ -12,8 +12,8 @@ public class KataTest {
         assertEquals("R", rot13("E"));
     }
 
-    private String rot13(String w) {
-        if (w.equals("E")) {
+    private String rot13(String stringToConvert) {
+        if (stringToConvert.equals("E")) {
             return "R";
         }
 
