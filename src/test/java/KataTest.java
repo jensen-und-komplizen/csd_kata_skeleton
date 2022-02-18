@@ -8,32 +8,8 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class KataTest {
-    @Test
-    public void uppercaseWTranslatesToUppercaseJ() {
-        assertEquals("J", rot13("W"));
-    }
 
-    @Test
-    public void uppercaseETranslatesToUppercaseR() {
-        assertEquals("R", rot13("E"));
-    }
-
-    @Test
-    public void uppercaseATranslatesToUppercaseN() {
-        assertEquals("N", rot13("A"));
-    }
-
-    @Test
-    public void uppercaseMTranslatesToUppercaseZ() {
-        assertEquals("Z", rot13("M"));
-    }
-
-    @Test
-    public void uppercaseNTranslatesToUppercaseA() {
-        assertEquals("A", rot13("N"));
-    }
-
-    @ParameterizedTest
+    @ParameterizedTest(name="\"{0}\" converts to \"{1}\"")
     @MethodSource("singleUppercaseLettersDataSource")
     void singleUppercaseLetterConvertedToRot13(String letterToConvert, String expectedLetter) {
         assertEquals(expectedLetter, rot13(letterToConvert));
@@ -41,7 +17,11 @@ public class KataTest {
 
     private static Stream<Arguments> singleUppercaseLettersDataSource() {
         return Stream.of(
-                Arguments.of("W", "J")
+                Arguments.of("W", "J"),
+                Arguments.of("E", "R"),
+                Arguments.of("A", "N"),
+                Arguments.of("M", "Z"),
+                Arguments.of("N", "A")
         );
     }
 
