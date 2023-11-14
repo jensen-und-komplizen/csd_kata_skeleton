@@ -11,7 +11,7 @@ the output should look like
 
 If you pulled this repository you have to change the working directory. In order to check where you are open the terminal and enter
 
-`$PWD`
+`echo $PWD`
 
 it should look like
 
