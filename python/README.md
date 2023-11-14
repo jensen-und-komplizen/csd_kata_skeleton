@@ -23,7 +23,7 @@ Switch to the *Python* subdirectory using
 
 and your working directory should look like
 
-`<HOME_DIRECTORY>/csd_kata_skeleton/python`
+`<SOME_DIRECTORY>/csd_kata_skeleton/python`
 
 Now you can execute the tests using
 
@@ -36,7 +36,7 @@ leading to a result like
 FAIL: test_kata (kata_test.TestKata.test_kata)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-File "/Users/bjornjensen/Development/csd_kata_skeleton/python/kata_test.py", line 11, in test_kata
+File "<SOME_DIRECTORY>/csd_kata_skeleton/python/kata_test.py", line 11, in test_kata
 self.assertTrue(False)
 AssertionError: False is not true
 
