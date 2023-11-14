@@ -7,6 +7,8 @@ the output should look like
 
 `Python 3.11.5`
 
+If **Python** is not installed visit the related website and follow the instructions to get **Python** installed on your system.
+
 # How to execute the tests #
 
 If you pulled this repository you have to change the working directory. In order to check where you are open the terminal and enter
