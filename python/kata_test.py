@@ -8,5 +8,4 @@ def do_something():
 class TestKata(unittest.TestCase):
 
     def test_kata(self):
-        return True
-    
+        self.assertTrue(False)
