@@ -40,7 +40,7 @@ In our context we're using **[jest](https://jestjs.io/)**. Remember that you nee
 
 You can execute the tests using
 
-`jest`
+`npm test`
 
 which should lead to a result like
 
