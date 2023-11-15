@@ -1,6 +1,6 @@
 # What do you need? #
 In order to be able to execute your test you need **[Node.js](https://nodejs.org)** in Version 21.x. In addition to **Node.js** you need to have **[npm](https://www.npmjs.com/)** (Node Package Manager) installed. If you don't know 
-If you don't know if **Node.js** and **npm** are installed or not ope`n the terminal and execute
+If you don't know if **Node.js** and **npm** are installed or not open the terminal and execute
 
 `node -v`
 
