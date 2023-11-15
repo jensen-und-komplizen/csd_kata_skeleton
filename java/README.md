@@ -68,14 +68,14 @@ which should lead to a result like
 [INFO] 
 [INFO] --- resources:3.3.1:resources (default-resources) @ kata-java ---
 [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory /Users/bjornjensen/Development/csd_kata_skeleton/java/src/main/resources
+[INFO] skip non existing resourceDirectory <SOME_DIRECTORY>/csd_kata_skeleton/java/src/main/resources
 [INFO] 
 [INFO] --- compiler:3.11.0:compile (default-compile) @ kata-java ---
 [INFO] No sources to compile
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ kata-java ---
 [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory /Users/bjornjensen/Development/csd_kata_skeleton/java/src/test/resources
+[INFO] skip non existing resourceDirectory <SOME_DIRECTORY>/csd_kata_skeleton/java/src/test/resources
 [INFO] 
 [INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ kata-java ---
 [INFO] Nothing to compile - all classes are up to date
@@ -105,16 +105,5 @@ which should lead to a result like
 [INFO] Total time:  0.998 s
 [INFO] Finished at: 2023-11-15T09:35:37+01:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project kata-java: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/bjornjensen/Development/csd_kata_skeleton/java/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 ```
         
