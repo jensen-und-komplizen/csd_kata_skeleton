@@ -31,7 +31,13 @@ Now you can execute the tests using
 
 `python -m unittest kata_test.py`
 
-leading to a result like
+Depending on how you installed **Python** it might be found as a command. In this case
+
+`python3 -m unittest kata_test.py`
+
+should work. I.e. in the **Docker** image provided you have to use the *python3* variant.
+
+But no matter which variant is used both should lead to a result like
 
 ```
 ======================================================================
