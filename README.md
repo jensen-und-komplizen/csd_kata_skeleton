@@ -18,7 +18,7 @@ One way is to check out this repository and follow the instructions provided in 
 Another way is to use the **Dockerfile** provided in this repository. That will prevent you from installing different development environments locally through providing a **[Docker](https://www.docker.com/)** container which has all necessary tools in it.
 
 ### Getting started with Docker ###
-In order to get started with **Docker** you might want to check out the [*official* documentation](https://www.docker.com/get-started/). It will lead to the situation that you have to install docker. You can check if **Docker** by opening the terminal and executing the following command
+In order to get started with **Docker** you might want to check out the [*official* documentation](https://www.docker.com/get-started/). It will lead to the situation that you have to install docker. You can check if **Docker** is installed by opening the terminal and executing the following command
 
 `docker -v`
 
