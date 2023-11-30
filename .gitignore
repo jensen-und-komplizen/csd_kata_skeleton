@@ -5,6 +5,10 @@
 ### Intellij ###
 **/.idea/*
 
+
+### Fleet ###
+**/.fleet/*
+
 ### Mac OS specific ###
 .DS_Store
 
