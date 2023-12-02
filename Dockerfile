@@ -28,3 +28,4 @@ RUN npm install jest -g
 # Linking the current workdirectory
 COPY . /csd_kata_skeleton/
 WORKDIR /csd_kata_skeleton/
+RUN cd java; mvn install -DskipTests
