@@ -1,0 +1,20 @@
+{
+  "name": "jensen-und-komplizen/kata_skeleten",
+  "description": "Kata Skeleten",
+  "license": "proprietary",
+  "require-dev": {
+    "php": "^8.2",
+    "phpunit/phpunit": "^10"
+  },
+  "autoload": {
+      "psr-4": {
+      "Kata\\": "src/"
+      }
+  },
+  "scripts": {
+      "test": "phpunit"
+  },
+  "config": {
+    "bin-dir": "bin/"
+  }
+}

@@ -21,6 +21,11 @@ RUN bash -c 'curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.ke
 RUN bash -c 'echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list'
 RUN apt-get update -y && apt-get install nodejs -y
 
+# PHP installation asks for a timezone, that is why we disable the interactive mode
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get install php-cli php-dom php-json php-mbstring composer -y
+
 # Setting up JavaScript test environment
 WORKDIR /csd_kata_skeleton/javascript/
 RUN npm install jest -g
