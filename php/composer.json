@@ -1,6 +1,6 @@
 {
   "name": "jensen-und-komplizen/kata_skeleton",
-  "description": "Kata Skeleten",
+  "description": "Kata Skeleton",
   "license": "proprietary",
   "require-dev": {
     "php": "^8.1",
