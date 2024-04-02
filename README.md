@@ -13,6 +13,7 @@ One way is to check out this repository and follow the instructions provided in 
 - For tests written in **Java** take a look [here](https://github.com/jensen-und-komplizen/csd_kata_skeleton/tree/main/java)
 - For tests written in **JavaScript** take a look [here](https://github.com/jensen-und-komplizen/csd_kata_skeleton/tree/main/javascript)
 - For tests written in **Python** take a look [here](https://github.com/jensen-und-komplizen/csd_kata_skeleton/tree/main/python)
+- For tests written in **PHP** take a look [here](https://github.com/jensen-und-komplizen/csd_kata_skeleton/tree/main/php)
 
 ## Using a virtual development environment by installing Docker only ##
 Another way is to use the **Dockerfile** provided in this repository. That will prevent you from installing different development environments locally through providing a **[Docker](https://www.docker.com/)** container which has all necessary tools in it.
@@ -38,6 +39,8 @@ After you're done cloning you should see a directory including the following con
    |     |__ <java source etc.>
    |__ javascript/
    |     |__ <javascript source etc.>
+   |__ php/
+   |     |__ <php source etc.>
    |__ python/
    |     |__ <python source etc.>
    |__ Dockerfile
@@ -52,38 +55,39 @@ The next step would be to create a local image from the dockerfile provided. On 
 The result should look like
 
 ```
-[+] Building 142.9s (25/25) FINISHED                                                                                                         docker:desktop-linux
- => [internal] load build definition from Dockerfile                                                                                                         0.0s
- => => transferring dockerfile: 1.76kB                                                                                                                       0.0s
- => [internal] load .dockerignore                                                                                                                            0.0s
- => => transferring context: 2B                                                                                                                              0.0s
- => resolve image config for docker.io/docker/dockerfile:1                                                                                                   1.8s
- => [auth] docker/dockerfile:pull token for registry-1.docker.io                                                                                             0.0s
- => CACHED docker-image://docker.io/docker/dockerfile:1@sha256:ac85f380a63b13dfcefa89046420e1781752bab202122f8f50032edf31be0021                              0.0s
- => [internal] load metadata for docker.io/library/ubuntu:22.04                                                                                              1.2s
- => [auth] library/ubuntu:pull token for registry-1.docker.io                                                                                                0.0s
- => [ 1/16] FROM docker.io/library/ubuntu:22.04@sha256:2b7412e6465c3c7fc5bb21d3e6f1917c167358449fecac8176c6e496e5c1f05f                                      0.0s
- => [internal] load build context                                                                                                                            0.0s
- => => transferring context: 23.00kB                                                                                                                         0.0s
- => CACHED [ 2/16] RUN apt update && apt upgrade -y && apt autoremove -y                                                                                     0.0s
- => CACHED [ 3/16] RUN apt install curl git zip unzip nano -y                                                                                                0.0s
- => [ 4/16] COPY . /usr/src/csd_kata_skeleton/                                                                                                               0.0s
- => [ 5/16] WORKDIR /csd_kata_skeleton/                                                                                                                      0.0s
- => [ 6/16] RUN bash -c 'curl -s "https://get.sdkman.io" | bash'                                                                                             8.8s
- => [ 7/16] RUN bash -c 'source "$HOME/.sdkman/bin/sdkman-init.sh"     && sdk install java $JAVA_VERSION     && sdk install maven $MAVEN_VERSION'           84.2s
- => [ 8/16] RUN apt install python3 -y                                                                                                                       3.5s 
- => [ 9/16] RUN apt-get update -y                                                                                                                            2.0s 
- => [10/16] RUN apt-get install -y ca-certificates curl gnupg                                                                                                3.1s 
- => [11/16] RUN mkdir -p /etc/apt/keyrings                                                                                                                   0.3s 
- => [12/16] RUN bash -c 'curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg'           0.4s 
- => [13/16] RUN bash -c 'echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt  0.1s 
- => [14/16] RUN apt-get update -y                                                                                                                            1.1s 
- => [15/16] RUN apt-get install nodejs -y                                                                                                                    8.5s 
- => [16/16] RUN npm install --save-dev jest                                                                                                                 26.9s 
- => exporting to image                                                                                                                                       0.9s 
- => => exporting layers                                                                                                                                      0.9s 
- => => writing image sha256:254db3ebcbda123541b88a401248185a1629e535c1c5c8fecef7df0c5f80a6d0                                                                 0.0s 
- => => naming to docker.io/library/csd_kata_skeleton  
+[+] Building 35.6s (26/26) FINISHED                                                      docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                     0.0s
+ => => transferring dockerfile: 1.58kB                                                                   0.0s
+ => resolve image config for docker.io/docker/dockerfile:1                                               0.9s
+ => [auth] docker/dockerfile:pull token for registry-1.docker.io                                         0.0s
+ => CACHED docker-image://docker.io/docker/dockerfile:1@sha256:ac85f380a63b13dfcefa89046420e1781752bab2  0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                          0.0s
+ => [internal] load .dockerignore                                                                        0.0s
+ => => transferring context: 2B                                                                          0.0s
+ => [ 1/18] FROM docker.io/library/ubuntu:22.04                                                          0.0s
+ => [internal] load build context                                                                        0.1s
+ => => transferring context: 382.07kB                                                                    0.1s
+ => CACHED [ 2/18] RUN apt update && apt upgrade -y                                                      0.0s
+ => CACHED [ 3/18] RUN apt install curl git zip unzip python3 openjdk-21-jdk openjdk-21-jre maven -y     0.0s
+ => CACHED [ 4/18] RUN bash -c 'echo JAVA_HOME=/usr/lib/jvm/openjdk-21 >> $HOME/.bashrc'                 0.0s
+ => CACHED [ 5/18] RUN bash -c 'echo PATH=\$PATH:\$JAVA_HOME/bin >> $HOME/.bashrc'                       0.0s
+ => CACHED [ 6/18] RUN apt-get update -y && apt-get install -y ca-certificates curl gnupg                0.0s
+ => CACHED [ 7/18] RUN mkdir -p /etc/apt/keyrings                                                        0.0s
+ => CACHED [ 8/18] RUN bash -c 'curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key |   0.0s
+ => CACHED [ 9/18] RUN bash -c 'echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.node  0.0s
+ => CACHED [10/18] RUN apt-get update -y && apt-get install nodejs -y                                    0.0s
+ => [11/18] COPY . /csd_kata_skeleton/                                                                   0.2s
+ => [12/18] WORKDIR /csd_kata_skeleton/php/                                                              0.0s
+ => [13/18] RUN apt-get install php-cli php-dom php-json php-mbstring composer -y                        5.6s
+ => [14/18] RUN composer update                                                                          4.1s 
+ => [15/18] WORKDIR /csd_kata_skeleton/javascript/                                                       0.0s 
+ => [16/18] RUN npm install jest -g                                                                      9.2s 
+ => [17/18] WORKDIR /csd_kata_skeleton/                                                                  0.0s 
+ => [18/18] RUN cd java; mvn install -DskipTests                                                        15.0s 
+ => exporting to image                                                                                   0.4s 
+ => => exporting layers                                                                                  0.4s 
+ => => writing image sha256:d1f284332282fa5c6e4e4316abcce49d06189c0e4bc4dc193938987a0db5c97d             0.0s
+ => => naming to docker.io/library/csd_kata_skeleton                                                     0.0s
 ```
 
 If the build is successful you can start the container by running 
