@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Datei Dockerfile
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 LABEL maintainer = "bjoern@jensen-und-komplizen.de"
 
 # Preparing the system
