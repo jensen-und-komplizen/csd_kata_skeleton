@@ -95,3 +95,5 @@ If the build is successful you can start the container by running
 `docker run -it --rm -v ${PWD}:/csd_kata_skeleton csd_kata_skeleton`
 
 This command will start the Docker container and link the current working directory to the container. It will open a terminal inside the container in a directoy called *csd_kata_skeleton*. This directory includes the linked sources (which you cloned from our repository). Following this approach will enable you to edit the files on your local machine and execute the tests inside the container.
+
+When you're done with the container you can exit it by typing `exit` in the terminal. The container will be removed automatically.
